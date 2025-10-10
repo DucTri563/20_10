@@ -1,0 +1,71 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  color: #333;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.scene {
+  display: none;
+  padding: 40px;
+}
+
+.scene.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #ff4500;
+  transform: scale(1.05);
+}
+
+#gameArea {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border: 3px dashed #fff;
+  margin-top: 30px;
+  background: rgba(255,255,255,0.2);
+}
+
+.game-btn {
+  position: absolute;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.game-btn:hover {
+  background: #2e8b57;
+  transform: scale(1.1);
+}

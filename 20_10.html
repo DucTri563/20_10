@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trò chơi đổi nút!</title>
+  <link rel="stylesheet" href="20_10.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Cảnh 1 -->
+  <section id="scene1" class="scene active">
+    <h2>🎯 Nhập tên của bạn</h2>
+    <input type="text" id="playerName" placeholder="Nhập tên..."><br><br>
+
+    <label>Giới tính:</label>
+    <select id="gender">
+      <option value="">-- Chọn giới tính --</option>
+      <option value="male">Nam</option>
+      <option value="female">Nữ</option>
+    </select><br><br>
+
+    <button id="startBtn">Bắt đầu</button>
+    <p id="kickMessage" class="hidden" style="color:red; font-weight:bold;"></p>
+  </section>
+
+  <!-- Cảnh 2 -->
+  <section id="scene2" class="scene">
+    <h2>🔥 Trò chơi đổi nút!</h2>
+    <p>Bấm nhanh các nút xuất hiện ngẫu nhiên!</p>
+    <div id="gameArea"></div>
+    <p id="progress"></p>
+  </section>
+
+  <!-- Cảnh 3 -->
+  <section id="scene3" class="scene">
+    <h2>🎉 Chúc mừng!</h2>
+    <pre style="text-align: center; font-family: times new roman; font-size: 16px;">
+🌸 Gửi Những Đóa hoa Tổ Quốc 🌸
+
+Tháng mười lại ghé qua đây,
+Gửi bao thương mến cho người con gái.
+Dẫu quen, dẫu lạ — hôm nay,
+Xin chúc nụ cười chẳng hề phôi phai.
+
+Xin chúc đời vẫn tinh mơ
+Như bình minh lên, như mùa xuân tới
+Xin chúc lòng vẫn ngây thơ,
+Như sương mai đọng trong tờ nắng sớm.
+
+Tuổi xuân như gió mơn man,
+Dẫu bao bão tố — dịu dàng vẫn nguyên.
+Tháng mười , tớ chỉ gửi riêng
+Một lời chúc nhỏ, mà nghiêng cả trời.
+
+Cho ai đang sống giữa đời,
+Một chút an yên, một lời thương mến.
+Chúc cậu, dù lạ hay quen 
+Mãi là điều đẹp, giữa muôn điều thường. 💖
+    </pre>
+    </h2>
+    <p id="finalMessage"></p>
+    <button id="restartBtn">Chơi lại</button>
+  </section>
+
+  <script src="20_10.js"></script>
+</body>
+</html>
