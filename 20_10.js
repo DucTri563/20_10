@@ -119,6 +119,22 @@ function spawnButton() {
   btn.style.top = `${y}px`;
 
   // --- Hiệu ứng gõ chữ cho bài thơ ---
+
+
+
+  btn.addEventListener("click", () => {
+    clickCount++;
+    progress.textContent = `Đã bấm ${clickCount}/${totalClicks}`;
+    if (clickCount >= totalClicks) {
+      endGame();
+    } else {
+      spawnButton();
+    }
+  });
+
+  gameArea.appendChild(btn);
+}
+
 const poemLines = [
   "🌸 Gửi Những Đóa hoa Tổ Quốc 🌸\n",
   "",
@@ -173,27 +189,13 @@ function typePoem() {
 }
 
 // Gọi hàm này khi đến scene3
-const scene3 = document.getElementById("scene3");
 const observer = new MutationObserver(() => {
   if (scene3.classList.contains("active")) {
     typePoem();
   }
 });
 observer.observe(scene3, { attributes: true, attributeFilter: ["class"] });
-
-
-  btn.addEventListener("click", () => {
-    clickCount++;
-    progress.textContent = `Đã bấm ${clickCount}/${totalClicks}`;
-    if (clickCount >= totalClicks) {
-      endGame();
-    } else {
-      spawnButton();
-    }
-  });
-
-  gameArea.appendChild(btn);
-}
+});
 
 function endGame() {
   showScene(scene3);
@@ -209,6 +211,8 @@ restartBtn.addEventListener("click", () => {
   startBtn.style.display = "inline";
   kickMessage.classList.add("hidden");
   showScene(scene1);
-});
+
+  
+
 
 
