@@ -88,12 +88,12 @@ function spawnButton() {
     ":)))",
     ":)))",
     ":)))",
-    "Bạn vẫn cố gắng hả? :)))",
+    "Cậu vẫn cố gắng hả? :)))",
     "Đúng rồi, phải thế ! :)))",
     "Cuộc sống là như vậy đó :)))",
     "Phải luôn cố gắng :)))",
-    "Mỗi giây dừng là bị giẫm đạt lên ",
-    "Cảm giác ấy nó rất đau khổ, tớ hiểu mà",
+    "Mỗi giây dừng là bị thụt lùi lại ",
+    "Cảm giác ấy nó rất khó chịu, tớ hiểu mà :)",
     "Mặc kệ và bước tiếp nhỉ ?",
     "Phải không ? ",
     "Phải ? :)))",
@@ -146,3 +146,4 @@ restartBtn.addEventListener("click", () => {
   kickMessage.classList.add("hidden");
   showScene(scene1);
 });
+
