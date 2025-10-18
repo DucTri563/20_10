@@ -118,6 +118,70 @@ function spawnButton() {
   btn.style.left = `${x}px`;
   btn.style.top = `${y}px`;
 
+  // --- Hiệu ứng gõ chữ cho bài thơ ---
+const poemLines = [
+  "🌸 Gửi Những Đóa hoa Tổ Quốc 🌸\n",
+  "",
+  "Tháng mười lại ghé qua đây,",
+  "Gửi bao thương mến cho người con gái.",
+  "Dẫu quen, dẫu lạ — hôm nay,",
+  "Xin chúc nụ cười chẳng hề phôi phai.",
+  "",
+  "Xin chúc đời vẫn tinh mơ",
+  "Như bình minh lên, như mùa xuân tới",
+  "Xin chúc lòng vẫn ngây thơ,",
+  "Như sương mai đọng trong tờ nắng sớm.",
+  "",
+  "Tuổi xuân như gió mơn man,",
+  "Dẫu bao bão tố — dịu dàng vẫn nguyên.",
+  "Tháng mười , tớ chỉ gửi riêng",
+  "Một lời chúc nhỏ, mà nghiêng cả trời.",
+  "",
+  "Cho ai đang sống giữa đời,",
+  "Một chút an yên, một lời thương mến.",
+  "Chúc cậu, dù lạ hay quen",
+  "Mãi là điều đẹp, giữa muôn điều thường. 💖"
+];
+
+function typePoem() {
+  const poemEl = document.getElementById("poem");
+  poemEl.innerHTML = "";
+  let line = 0;
+  let char = 0;
+
+  function typeChar() {
+    if (line < poemLines.length) {
+      const currentLine = poemLines[line];
+      if (char < currentLine.length) {
+        poemEl.innerHTML += currentLine.charAt(char);
+        char++;
+        setTimeout(typeChar, 40); // tốc độ gõ từng ký tự
+      } else {
+        poemEl.innerHTML += "\n";
+        line++;
+        char = 0;
+        setTimeout(typeChar, 400); // nghỉ giữa các dòng
+      }
+    } else {
+      // hiệu ứng lung linh khi gõ xong
+      poemEl.style.textShadow = "0 0 10px #ff7eb3, 0 0 20px #ffc1dc";
+      poemEl.style.transition = "all 1s ease-in-out";
+    }
+  }
+
+  typeChar();
+}
+
+// Gọi hàm này khi đến scene3
+const scene3 = document.getElementById("scene3");
+const observer = new MutationObserver(() => {
+  if (scene3.classList.contains("active")) {
+    typePoem();
+  }
+});
+observer.observe(scene3, { attributes: true, attributeFilter: ["class"] });
+
+
   btn.addEventListener("click", () => {
     clickCount++;
     progress.textContent = `Đã bấm ${clickCount}/${totalClicks}`;
@@ -146,4 +210,5 @@ restartBtn.addEventListener("click", () => {
   kickMessage.classList.add("hidden");
   showScene(scene1);
 });
+
 
