@@ -195,7 +195,6 @@ const observer = new MutationObserver(() => {
   }
 });
 observer.observe(scene3, { attributes: true, attributeFilter: ["class"] });
-});
 
 function endGame() {
   showScene(scene3);
@@ -211,8 +210,4 @@ restartBtn.addEventListener("click", () => {
   startBtn.style.display = "inline";
   kickMessage.classList.add("hidden");
   showScene(scene1);
-
-  
-
-
-
+});
