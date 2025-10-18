@@ -64,8 +64,16 @@ button:hover {
   font-weight: bold;
   transition: 0.2s;
 }
+#poem {
+  white-space: pre-wrap;
+  color: #ff4da6;
+  text-shadow: 0 0 5px rgba(255, 192, 203, 0.6);
+  font-weight: 500;
+  opacity: 0.9;
+}
 
 .game-btn:hover {
   background: #2e8b57;
   transform: scale(1.1);
 }
+
