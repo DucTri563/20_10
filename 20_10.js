@@ -89,14 +89,14 @@ function spawnButton() {
     ":)))",
     ":)))",
     "Cậu vẫn cố gắng hả? :)))",
-    "Đúng rồi, phải thế ! :)))",
-    "Cuộc sống là như vậy đó :)))",
-    "Phải luôn cố gắng :)))",
+    "Đúng rồi, phải thế ! :))",
+    "Cuộc sống là như vậy đó :)",
+    "Phải luôn cố gắng ",
     "Mỗi giây dừng là bị thụt lùi lại ",
     "Cảm giác ấy nó rất khó chịu, tớ hiểu mà :)",
     "Mặc kệ và bước tiếp nhỉ ?",
     "Phải không ? ",
-    "Phải ? :)))",
+    "Phải ? :))",
     "Phải rồi :)))",
     "Tớ quên mất...",
     "Cậu là người mạnh mẽ thế nào...",
@@ -124,7 +124,6 @@ function spawnButton() {
 
   btn.addEventListener("click", () => {
     clickCount++;
-    progress.textContent = `Đã bấm ${clickCount}/${totalClicks}`;
     if (clickCount >= totalClicks) {
       endGame();
     } else {
@@ -137,7 +136,6 @@ function spawnButton() {
 
 const poemLines = [
   "🌸 Gửi Những Đóa hoa Tổ Quốc 🌸\n",
-  "",
   "Tháng mười lại ghé qua đây,",
   "Gửi bao thương mến cho người con gái.",
   "Dẫu quen, dẫu lạ — hôm nay,",
